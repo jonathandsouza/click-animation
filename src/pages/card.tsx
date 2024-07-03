@@ -1,7 +1,7 @@
 import react from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { RippleEffect2 } from "./ripple2";
+import RippleEffect2 from "./ripple2";
 
 const Card = () => {
 	const [sliderRef] = useKeenSlider({

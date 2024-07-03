@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRef } from "react";
+import react, { useRef } from "react";
 
 export type IRippleEffectProps = {
 	isLink?: boolean;
@@ -9,7 +9,7 @@ export type IRippleEffectProps = {
 	[x: string]: any;
 };
 
-export const RippleEffect2 = ({
+const RippleEffect2 = ({
 	isLink = false,
 	children,
 	href = "",
@@ -82,3 +82,5 @@ export const RippleEffect2 = ({
 		</div>
 	);
 };
+
+export default RippleEffect2;

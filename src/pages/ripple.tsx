@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { useRef } from "react";
-// import { mergeClasses } from '@nx-vu/shared/util/services/utilities';
-// import { useViewportContext } from '@nx-vu/shared/util/services/viewport';
+import react, { useRef } from "react";
 
 export type IRippleEffectProps = {
 	isLink?: boolean;
@@ -11,7 +8,7 @@ export type IRippleEffectProps = {
 	[x: string]: any;
 };
 
-export const RippleEffect = ({
+const RippleEffect = ({
 	isLink = false,
 	children,
 	href = "",
@@ -69,3 +66,5 @@ export const RippleEffect = ({
 		</div>
 	);
 };
+
+export default RippleEffect;
