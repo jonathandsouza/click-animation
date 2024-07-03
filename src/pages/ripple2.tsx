@@ -1,5 +1,5 @@
 import Link from "next/link";
-import react, { useRef } from "react";
+import react, { useRef, useState } from "react";
 
 export type IRippleEffectProps = {
 	isLink?: boolean;
@@ -14,6 +14,7 @@ const RippleEffect2 = ({
 	children,
 	href = "",
 	className = "",
+	getClassesList = () => {},
 	...rest
 }: IRippleEffectProps) => {
 	const anchorRef = useRef<any>();
@@ -27,15 +28,16 @@ const RippleEffect2 = ({
 	const rippleActive = "active:card-ripple-effect-active";
 
 	const addClasses = () => {
-		console.log("add classes");
 		locRef.current &&
 			locRef.current.classList.add(ripple, rippleHover, rippleActive);
+
+		getClassesList(locRef.current.classList);
 	};
 
 	const removeClasses = () => {
-		console.log("remove classes");
 		locRef.current &&
 			locRef.current.classList.remove(ripple, rippleHover, rippleActive);
+		getClassesList(locRef.current.classList);
 	};
 
 	return isLink ? (
@@ -43,15 +45,15 @@ const RippleEffect2 = ({
 			<a
 				ref={anchorRef}
 				onTouchStart={() => {
-					console.log("touch start - REMOVE");
+					console.log("onTouchStart - remove classes");
 					removeClasses();
 				}}
 				onTouchEnd={() => {
-					console.log("touch end - REMOVE");
+					console.log("onTouchEnd -  remove classes");
 					addClasses();
 				}}
 				onTouchMove={() => {
-					console.log("touch move - ADD");
+					console.log("onTouchMove -  add classes");
 					removeClasses();
 				}}
 				className={`${className} ${ripple} ${rippleHover} ${rippleActive}`}
