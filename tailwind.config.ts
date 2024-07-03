@@ -17,7 +17,7 @@ const config: Config = {
 		},
 	},
 	plugins: [
-		plugin(function ({ addUtilities }) {
+		plugin(({ addUtilities }: { addUtilities: any }) => {
 			const newUtilities = {
 				".card-ripple-effect": {
 					"background-position": "center",

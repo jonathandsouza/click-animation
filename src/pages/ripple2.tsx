@@ -4,7 +4,7 @@ import { useRef } from "react";
 export type IRippleEffectProps = {
 	isLink?: boolean;
 	href?: string;
-	children: any;
+	children?: any;
 	className?: string;
 	[x: string]: any;
 };
