@@ -46,6 +46,27 @@ const Card = () => {
 			>
 				<div>5</div>
 			</RippleEffect2>
+
+			<RippleEffect2
+				isLink
+				className="keen-slider__slide slide-card number-slide6"
+			>
+				<div>6</div>
+			</RippleEffect2>
+
+			<RippleEffect2
+				isLink
+				className="keen-slider__slide slide-card number-slide7"
+			>
+				<div>7</div>
+			</RippleEffect2>
+
+			<RippleEffect2
+				isLink
+				className="keen-slider__slide slide-card number-slide8"
+			>
+				<div>8</div>
+			</RippleEffect2>
 		</div>
 	);
 };
