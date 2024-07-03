@@ -44,10 +44,10 @@ const RippleEffect2 = ({
 		<Link href={href} passHref legacyBehavior>
 			<a
 				ref={anchorRef}
-				onTouchStart={() => {
-					console.log("onTouchStart - remove classes");
-					removeClasses();
-				}}
+				// onTouchStart={() => {
+				// 	console.log("onTouchStart - remove classes");
+				// 	removeClasses();
+				// }}
 				onTouchEnd={() => {
 					console.log("onTouchEnd -  remove classes");
 					addClasses();
@@ -65,10 +65,10 @@ const RippleEffect2 = ({
 	) : (
 		<div
 			ref={divRef}
-			onTouchStart={() => {
-				console.log("touch start - REMOVE");
-				removeClasses();
-			}}
+			// onTouchStart={() => {
+			// 	console.log("touch start - REMOVE");
+			// 	removeClasses();
+			// }}
 			onTouchEnd={() => {
 				console.log("touch end - REMOVE");
 				addClasses();

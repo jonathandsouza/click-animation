@@ -40,7 +40,7 @@ const RippleEffect = ({
 	return (
 		<div
 			className={classes}
-			onTouchStart={removeClasses}
+			// onTouchStart={removeClasses}
 			onTouchEnd={addClasses}
 			onTouchMove={removeClasses}
 			style={{

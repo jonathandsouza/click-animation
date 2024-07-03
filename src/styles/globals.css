@@ -40,3 +40,18 @@ body {
 	width: 300px;
 	height: 300px;
 }
+
+/* Animation classes start */
+.ripple {
+	background-position: center;
+	transition: background 0.8s;
+}
+.ripple:hover {
+	background: #f1f1f1 radial-gradient(circle, transparent 1%, #f1f1f1 1%)
+		center/15000%;
+}
+.ripple:active {
+	background-color: #dddddd;
+	background-size: 100%;
+	transition: background 0s;
+}

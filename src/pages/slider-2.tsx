@@ -3,10 +3,10 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import RippleEffect2 from "./ripple2";
 
-const Card = () => {
+const Slider2 = () => {
 	const [appliedClasses, setAppliedClasses] = useState("");
 
-	const [sliderRef] = useKeenSlider({
+	const [sliderRef2] = useKeenSlider({
 		slides: {
 			perView: 3,
 			spacing: 15,
@@ -22,17 +22,16 @@ const Card = () => {
 
 	return (
 		<>
+			<h1>Slider 2</h1>
 			{appliedClasses}
-			<div ref={sliderRef} className="keen-slider">
+			<div ref={sliderRef2} className="keen-slider">
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide1"
 					getClassesList={getClassesList}
 				>
 					<div>1</div>
 				</RippleEffect2>
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide2"
 					getClassesList={getClassesList}
 				>
@@ -40,7 +39,6 @@ const Card = () => {
 				</RippleEffect2>
 
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide3"
 					getClassesList={getClassesList}
 				>
@@ -48,7 +46,6 @@ const Card = () => {
 				</RippleEffect2>
 
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide4"
 					getClassesList={getClassesList}
 				>
@@ -56,7 +53,6 @@ const Card = () => {
 				</RippleEffect2>
 
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide5"
 					getClassesList={getClassesList}
 				>
@@ -64,7 +60,6 @@ const Card = () => {
 				</RippleEffect2>
 
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide6"
 					getClassesList={getClassesList}
 				>
@@ -72,7 +67,6 @@ const Card = () => {
 				</RippleEffect2>
 
 				<RippleEffect2
-					isLink
 					className="keen-slider__slide slide-card number-slide7"
 					getClassesList={getClassesList}
 				>
@@ -90,4 +84,4 @@ const Card = () => {
 	);
 };
 
-export default Card;
+export default Slider2;
