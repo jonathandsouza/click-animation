@@ -22,7 +22,9 @@ const Slider1 = () => {
 
 	return (
 		<>
-			<h1>Slider 1 (adding and removing active class only)</h1>
+			<h1>
+				Slider 1 (with timers - adding and removing active class only)
+			</h1>
 			{appliedClasses}
 			<div ref={sliderRef} className="keen-slider">
 				<RippleEffect3

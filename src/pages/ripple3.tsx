@@ -1,5 +1,5 @@
 import Link from "next/link";
-import react, { useRef, useState } from "react";
+import react, { useRef, useEffect } from "react";
 
 export type IRippleEffectProps = {
 	isLink?: boolean;
@@ -27,12 +27,18 @@ const RippleEffect3 = ({
 	const rippleHover = "hover:card-ripple-effect-hover";
 	const rippleActive = "active:card-ripple-effect-active";
 
+	const timer = setTimeout(() => {
+		locRef.current && locRef.current.classList.remove(rippleActive);
+	}, 100);
+
+	useEffect(() => {
+		return () => clearTimeout(timer);
+	}, []);
+
 	const addClasses = () => {
 		locRef.current && locRef.current.classList.add(rippleActive);
 
-		setTimeout(() => {
-			locRef.current.classList.remove(rippleActive);
-		}, 100);
+		timer;
 
 		getClassesList(locRef.current.classList);
 	};
