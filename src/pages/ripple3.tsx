@@ -23,22 +23,24 @@ const RippleEffect3 = ({
 
 	const locRef = isLink ? anchorRef : divRef;
 
+	const timerRef = useRef<number>();
+
 	const ripple = "card-ripple-effect";
 	const rippleHover = "hover:card-ripple-effect-hover";
 	const rippleActive = "active:card-ripple-effect-active";
 
-	const timer = setTimeout(() => {
-		locRef.current && locRef.current.classList.remove(rippleActive);
-	}, 100);
-
 	useEffect(() => {
-		return () => clearTimeout(timer);
+		return () => clearTimeout(timerRef.current);
 	}, []);
 
 	const addClasses = () => {
+		console.log("adding class");
 		locRef.current && locRef.current.classList.add(rippleActive);
 
-		timer;
+		//
+		timerRef.current = setTimeout(() => {
+			locRef.current && locRef.current.classList.remove(rippleActive);
+		}, 100) as unknown as number;
 
 		getClassesList(locRef.current.classList);
 	};
@@ -53,8 +55,12 @@ const RippleEffect3 = ({
 		<Link href={href} passHref legacyBehavior>
 			<a
 				ref={anchorRef}
+				onTouchStart={() => {
+					console.log("start");
+				}}
+				onTouchMove={() => console.log("move")}
 				onTouchEnd={() => {
-					console.log("onTouchEnd -  remove classes");
+					console.log("end");
 					addClasses();
 				}}
 				className={`${className} ${ripple} ${rippleHover}`}
@@ -66,8 +72,10 @@ const RippleEffect3 = ({
 	) : (
 		<div
 			ref={divRef}
+			onTouchStart={() => console.log("start")}
+			onTouchMove={() => console.log("move")}
 			onTouchEnd={() => {
-				console.log("onTouchEnd -  remove classes");
+				console.log("end");
 				addClasses();
 			}}
 			className={`${className} ${ripple} ${rippleHover}`}

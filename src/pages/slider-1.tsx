@@ -15,16 +15,14 @@ const Slider1 = () => {
 
 	const getClassesList = useCallback((ee: any) => {
 		if (ee) {
-			console.log("callback", ee);
+			// console.log("callback", ee);
 			setAppliedClasses(Object.values(ee).slice(2).join(", "));
 		}
 	}, []);
 
 	return (
 		<>
-			<h1>
-				Slider 1 (with timers - adding and removing active class only)
-			</h1>
+			<h1>Slider 1 (with timers - adding and removing active class.)</h1>
 			{appliedClasses}
 			<div ref={sliderRef} className="keen-slider">
 				<RippleEffect3
