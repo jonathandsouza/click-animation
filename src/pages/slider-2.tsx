@@ -22,7 +22,7 @@ const Slider2 = () => {
 
 	return (
 		<>
-			<h1>Slider 2</h1>
+			<h1>Slider 2 (add/remove all classes)</h1>
 			{appliedClasses}
 			<div ref={sliderRef2} className="keen-slider">
 				<RippleEffect2

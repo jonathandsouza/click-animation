@@ -1,7 +1,7 @@
 import react, { useCallback, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import RippleEffect2 from "./ripple2";
+import RippleEffect3 from "./ripple3";
 
 const Slider1 = () => {
 	const [appliedClasses, setAppliedClasses] = useState("");
@@ -22,70 +22,70 @@ const Slider1 = () => {
 
 	return (
 		<>
-			<h1>Slider 1</h1>
+			<h1>Slider 1 (adding and removing active class only)</h1>
 			{appliedClasses}
 			<div ref={sliderRef} className="keen-slider">
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide1"
 					getClassesList={getClassesList}
 				>
 					<div>1</div>
-				</RippleEffect2>
-				<RippleEffect2
+				</RippleEffect3>
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide2"
 					getClassesList={getClassesList}
 				>
 					<div>2</div>
-				</RippleEffect2>
+				</RippleEffect3>
 
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide3"
 					getClassesList={getClassesList}
 				>
 					<div>3</div>
-				</RippleEffect2>
+				</RippleEffect3>
 
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide4"
 					getClassesList={getClassesList}
 				>
 					<div>4</div>
-				</RippleEffect2>
+				</RippleEffect3>
 
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide5"
 					getClassesList={getClassesList}
 				>
 					<div>5</div>
-				</RippleEffect2>
+				</RippleEffect3>
 
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide6"
 					getClassesList={getClassesList}
 				>
 					<div>6</div>
-				</RippleEffect2>
+				</RippleEffect3>
 
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide7"
 					getClassesList={getClassesList}
 				>
 					<div>7</div>
-				</RippleEffect2>
+				</RippleEffect3>
 
-				<RippleEffect2
+				<RippleEffect3
 					isLink
 					className="keen-slider__slide slide-card number-slide8"
 				>
 					<div>8</div>
-				</RippleEffect2>
+				</RippleEffect3>
 			</div>
 		</>
 	);

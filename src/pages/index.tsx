@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<>
-			<RippleEffect />
+			{/* <RippleEffect /> */}
 			<br />
 			<Slider1 />
 			<br />
@@ -20,7 +20,7 @@ export default function Home() {
 			<br />
 			<br />
 
-			<Slider3 />
+			{/* <Slider3 /> */}
 		</>
 	);
 }
